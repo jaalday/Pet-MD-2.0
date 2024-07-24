@@ -1,0 +1,11 @@
+
+.root{
+margin: auto;
+  background-color: rgb(161, 216, 226);
+}
+
+.arsenal-regular {
+  font-family: "Arsenal", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
