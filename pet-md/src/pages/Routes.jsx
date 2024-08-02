@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import Home from './Home';
 import Error from '../components/Error';
 import SignUp from './Signup';
-import Login from './Login';
+import Login, {action as loginAction} from './Login';
 import Profile from './Profile';
 
 
@@ -22,7 +22,10 @@ const router = createBrowserRouter([
             },
             {
                 path: "/login",
-                element: <Login/>
+                element: <Login/>,
+                action: loginAction,
+             
+
             },
             {
                 path: "/profile",
