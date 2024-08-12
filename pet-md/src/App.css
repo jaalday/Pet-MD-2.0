@@ -21,9 +21,12 @@
   color: rgb(40, 40, 56);
   font-size: 20px;
   font-weight: bold;
-
+ float: right;
   margin: 10px;
  
+}
+.navbar{
+  border-bottom: 2px solid white;
 }
    
 
@@ -60,6 +63,8 @@ z-index: 4;
 .title1{
   padding-top: 40px;
   margin-top: -150%;
+  font-size: 80px;
+  font-weight: bold;
 }
 
 
