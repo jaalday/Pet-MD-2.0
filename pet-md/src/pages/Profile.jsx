@@ -1,15 +1,21 @@
 
 
 
+
+import { useAuth } from "../AuthContext";
+
 const Profile = () => {
+    const { user, loading } = useAuth();
 
-  return (
-    <div>
-      <h1>Profile</h1>
-    
-    </div>
-  );
-}
+    if (loading) return <p>Loading...</p>;
 
-export
-default Profile;
+    if (!user) return <p>You are not logged in</p>;
+
+    return (
+        <div>
+            <h1>Welcome, {user.email}</h1>
+        </div>
+    );
+};
+
+export default Profile;

@@ -1,59 +1,73 @@
-import { Link } from 'react-router-dom';
 
-import { useState } from 'react';
+import { useAuth } from '../AuthContext';
 
 
 const Navigation = () => {
 
-    const [open, setOpen] = useState(false);
-
-    const DropdownItem = () => {
-        return (
-            <div className='nav-item'>
-                
-
-            <li className='list'>About</li>
-            <li className='list'>Contact</li>
-           
-            <Link to ="/signup"><li className='list'>Sign up</li></Link>
-            <Link to ="/login"><li className='list'>Log in</li></Link>
-            </div>
-        )
-    }
+ const { isAuth } = useAuth();
 
 
 
   return (
-    <div className='Nav'>
-        <div className='logo'>
-           <Link to ="/"> <img className='logo' src="https://fvhmt.com/wp-content/uploads/noun-pin-3642196-304D72.svg"/></Link>
-        </div>
 
-
-        <div className='menu-container'>
-
-        <div className='menu-trigger' onClick={() => (setOpen(!open))}>
-            <img className='burger' src="https://img.icons8.com/ios-glyphs/30/000000/menu.png" alt="menu"/>
-
-        </div>
-
-
-        <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>
-        <ul className='nav-items'>
-
+<>
+<nav className="navbar  navbar-expand-lg bg-body-" >
+  <div className="container-fluid">
+    <a className="logo" href="/"><img className="logo" src="https://ultrapet.com/wp-content/uploads/2015/12/PETMD-Logo.png"></img></a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav" >
+      <ul className="navbar-nav">
+        <li className="nav-item">
+            </li>
+          
+     
+        {isAuth ? (
+           <>
+            <li className="nav-item">
+            <a className="nav-link" href="/profile">Profile</a>
+            </li>
+            <li className="nav-item">
+            <a className="nav-link" href="/petprofile">Pet Profile</a>
+            </li>
+            <li className="nav-item">
+            <a className="nav-link" href="/logout">Logout</a>
+            </li>
+            </>
+        ):(
+            <>
            
-            <DropdownItem/>
-    
-        </ul>
-        </div> 
-        </div>
-   
+            <li className="nav-item">
+              <a className="nav-link" href="/about">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/signup">Sign up</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/login">Login</a>
+            </li>
+          
+            </>
 
-
+        ) }
 
        
+      </ul>
     </div>
+  </div>
+</nav> 
+
+</>
+    
+
   );
 }
 
 export default Navigation;
+
+
+
+
+
+
