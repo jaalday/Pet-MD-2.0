@@ -4,7 +4,7 @@ import { useAuth } from '../AuthContext';
 
 const Navigation = () => {
 
- const { isAuth } = useAuth();
+ const { user} = useAuth();
 
 
 
@@ -23,7 +23,7 @@ const Navigation = () => {
             </li>
           
      
-        {isAuth ? (
+        {user ? (
            <>
             <li className="nav-item">
             <a className="nav-link" href="/profile">Profile</a>

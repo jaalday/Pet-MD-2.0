@@ -31,6 +31,7 @@ const publicRoutes = [
                 path: "/login",
                 element: <Login/>,
                 // action: loginAction,
+                
              
             
             },
@@ -45,9 +46,9 @@ const publicRoutes = [
                 errorElement: <Error/>,
                 children: [
                     {
-                        path: "/profile",
-                        element: <Profile/>
-                            },
+                    path: "/profile",
+                    element: <Profile/>
+                        },
                             {
                                 path: "/logout",
                                 element: <Logout/>

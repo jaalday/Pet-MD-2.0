@@ -4,8 +4,8 @@ import Navigation from "../components/Navigation";
 
 
 const ProtectedRoutesLayout = () => {
-  const { isAuth } = useAuth();
-  if (!isAuth) {
+  const { user } = useAuth();
+  if (user === null) {
     
     return <Navigate to="/login" />;
   }

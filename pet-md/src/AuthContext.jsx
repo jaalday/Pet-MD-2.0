@@ -13,12 +13,13 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const fetchSession = async () => {
-            const { data: { session }, error } = await supabase.auth.getSession();
+            const { data, error } = await supabase.auth.getSession();
 
             if (error) {
                 console.log("Error fetching session:", error);
-            } else if (session) {
-                setUser(session.user);
+            } else if (data.session) {
+                console.log("Session data:", data.session);
+                setUser(data.session.user);
             }
 
             setLoading(false); 
