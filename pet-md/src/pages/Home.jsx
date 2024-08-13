@@ -6,7 +6,7 @@ import { supabase } from "../config/supabaClients";
 
 
 const Home = () => {
-    console.log("data:", supabase);
+  
 
 
 

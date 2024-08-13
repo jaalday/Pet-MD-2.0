@@ -1,5 +1,5 @@
 #root{
-  background-color: #5898c3;
+  /* background-color: #5898c3; */
   z-index: -7;
   position: absolute;
   width: 100%;
@@ -45,6 +45,8 @@
 float: left;
 width: 40%;
 }
+
+
 .title{
   width: 100%;
  
@@ -66,7 +68,46 @@ z-index: 4;
   font-size: 80px;
   font-weight: bold;
 }
-
+.login-container{
+  width: 80%;
+  height: 70vh;
+ 
+text-align: center;
+  margin-top: 10%;
+  background-color: #cfd0d1;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px black;
+}
+.login-text{
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: rgb(49, 49, 133);
+}
+.input{
+  width: 80%;
+  height: 40px;
+  margin-top: 60px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+text-align: center;
+}
+.login-button{
+  width: 40%;
+  height: 40px;
+ 
+  font-size: 20px;
+margin-top: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(39, 38, 38);
+  background-color: #325586;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px black;
+}
 
 @media (min-width: 800px) {
   .logo{

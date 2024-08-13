@@ -45,32 +45,31 @@ const SignUp = () => {
     <>
       <div className="sign_in_banner">
        
-        <div className="sign-in-card">
-          <h1>Sign-Up</h1>
+        <div className="login-container">
+          <h1 className="login-text">Sign-Up</h1>
           <form id="signUp" onSubmit={handleSubmit}>
-            <label>
-              Email:
+            
               <input
+              className="input"
                 type="email"
                 name="email"
                 placeholder="enter your email"
                 onChange={handleChange}
               />
-            </label>
-            <br />
-            <br />
-            <label>
-              Password:
+           
+          
+            
               <input
+              className="input"
                 type="password"
                 name="password"
                 placeholder="enter your password"
                 onChange={handleChange}
               />
-            </label>
+              <p> already have an account?</p> <Link to ="/login"><p>log in</p></Link>
+          
 
-            <br />
-            <br />
+          
        
             <button className="login-button" type="submit">
               Sign-up

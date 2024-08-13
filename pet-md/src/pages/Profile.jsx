@@ -3,13 +3,18 @@
 
 
 import { useAuth } from "../AuthContext";
+const user = JSON.parse(localStorage.getItem('user'));
 
 const Profile = () => {
-    const { user, loading } = useAuth();
 
-    if (loading) return <p>Loading...</p>;
+   user = JSON.parse(sessionStorage.getItem('user'));
+    if (user === null) {
+        return <Navigate to="/" />
 
-    if (!user) return <p>You are not logged in</p>;
+    }
+
+
+ 
 
     return (
         <div>
