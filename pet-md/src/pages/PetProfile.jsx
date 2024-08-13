@@ -1,11 +1,12 @@
 const PetProfile = () => {
 
 
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = (localStorage.getItem('user'));
+    console.log(user);  
     return (
         <>
 
-       <h2> pet profile</h2> {user.email}
+       <h2> pet profile</h2> {user.id}
         </>
     
  

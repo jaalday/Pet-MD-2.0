@@ -14,7 +14,7 @@ import PetProfile from './PetProfile';
 
 const Routes = () => {
 
-const { isAuth } = useAuth();
+const {  isAuth} = useAuth();
 
 const publicRoutes = [
     {
@@ -42,6 +42,15 @@ const publicRoutes = [
                 element: <Logout/>,
                 // loader:logoutLoader,
             },
+            {
+                path: "/profile",
+                element: <Profile/>,
+            },
+            {
+                path: "/petprofile",
+                element: <PetProfile/>,
+            }
+         
       
   
          
@@ -62,7 +71,7 @@ const publicRoutes = [
                         path: "/petprofile",
                         element: <PetProfile/>,
                     }
-                 
+              
                           
                    
                    

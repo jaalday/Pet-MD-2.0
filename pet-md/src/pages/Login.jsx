@@ -13,6 +13,7 @@ const Login  = () => {
     const navigate = useNavigate();
 
   const handleLogin = async (e) => {
+
     e.preventDefault();
     setError(null);
 
@@ -20,19 +21,31 @@ const Login  = () => {
       email,
       password,
     });
+    console.log("data", data);
+ 
+
    
 
-    if (error) {
-      console.error('Error logging in:', error.message);
-      setError(error.message);
-    } else {
+    // if (error) {
+    //   console.error('Error logging in:', error.message);
+    //   setError(error.message);
+    // } else {
+      if (data) {
+        const { user, session } = data;
+        localStorage.clear();
+        localStorage.setItem("user", user);
+        localStorage.setItem("access_token", session.access_token);
+        localStorage.setItem("refresh_token", session.refresh_token);
+        localStorage.setItem("expiration", session.expires_at);
+        console.log("data", data);
+      }
       
-    sessionStorage.setItem('user', JSON.stringify(data.user));
+    // sessionStorage.setItem('user', JSON.stringify(data.user));
     console.log("handlelogin", data.user);
     
     
       navigate('/profile'); 
-    }
+    // }
   };
   return (
     <div className='login-container'>

@@ -3,15 +3,13 @@
 
 
 import { useAuth } from "../AuthContext";
-const user = JSON.parse(localStorage.getItem('user'));
+
 
 const Profile = () => {
 
-   user = JSON.parse(sessionStorage.getItem('user'));
-    if (user === null) {
-        return <Navigate to="/" />
+    const { user } = useAuth();
 
-    }
+    
 
 
  
