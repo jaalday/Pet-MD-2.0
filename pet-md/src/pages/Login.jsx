@@ -40,7 +40,7 @@ const Login  = () => {
         console.log("data", data);
       }
       
-    sessionStorage.setItem('user', JSON.stringify(data.user));
+    // sessionStorage.setItem('user', JSON.stringify(data.user));
     console.log("handlelogin", data.user);
     
     

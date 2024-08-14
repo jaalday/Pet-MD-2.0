@@ -2,12 +2,12 @@
 
 
 
-// import { useAuth } from "../AuthContext";
+import { useAuth } from "../AuthContext";
 
 
 const Profile = () => {
 
-    // const { user } = useAuth();
+    const { isAuth } = useAuth();
 
     
 

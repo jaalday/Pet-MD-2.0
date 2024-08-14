@@ -5,8 +5,12 @@ import Navigation from "./Navigation";
 
 
 const ProtectedRoutesLayout = () => {
-  const {isAuth } = useAuth();
+
  
+
+  const {isAuth } = useAuth();
+
+
 console.log(isAuth);
 
   if (!isAuth) {

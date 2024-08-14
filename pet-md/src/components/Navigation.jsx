@@ -1,12 +1,12 @@
 
-// import { useAuth } from '../AuthContext';
+import { useAuth } from '../AuthContext';
 
 
 const Navigation = () => {
 
 
 
-
+const {isAuth } = useAuth();
 
   return (
 
@@ -18,15 +18,26 @@ const Navigation = () => {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNav" >
-      <ul className="navbar-nav">
+      <div className="navbar-nav">
         <li className="nav-item">
             </li>
           
-   
-            <>
-               <li className="nav-item">
+     
+        {isAuth? (
+           <>
+            <li className="nav-item">
             <a className="nav-link" href="/profile">Profile</a>
             </li>
+            <li>
+            <a className="nav-link" href="/petprofile">Pet Profile</a>
+            </li>
+            <li>
+            <a className="nav-link" href="/logout">Logout</a>
+            </li>
+            </>
+            
+            ) : (
+              <>
            
             <li className="nav-item">
               <a className="nav-link" href="/about">About</a>
@@ -37,13 +48,16 @@ const Navigation = () => {
             <li className="nav-item">
               <a className="nav-link" href="/login">Login</a>
             </li>
-          
             </>
+          )}
+          
+         
 
         
 
        
-      </ul>
+      </div>
+       
     </div>
   </div>
 </nav> 

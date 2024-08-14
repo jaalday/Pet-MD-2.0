@@ -14,7 +14,7 @@ import PetProfile from './PetProfile';
 
 const Routes = () => {
 
-const {  user} = useAuth();
+const {  isAuth} = useAuth();
 
 const publicRoutes = [
     {
@@ -70,8 +70,7 @@ const publicRoutes = [
                     {
                         path: "/logout",
                         element: <Logout/>,
-                        // loader:logoutLoader,
-                    },
+                    }
               
                           
                    
@@ -84,7 +83,7 @@ const publicRoutes = [
     
         const router = createBrowserRouter([
             ...publicRoutes,
-            ...(!user ? protectedRoutes : []),
+            ...(!isAuth ? protectedRoutes : []),
             ...protectedRoutes,
           ]);
 
