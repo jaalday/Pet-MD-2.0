@@ -38,14 +38,14 @@ const publicRoutes = [
             
             },
         
-            // {
-            //     path: "/profile",
-            //     element: <Profile/>,
-            // },
-            // {
-            //     path: "/petprofile",
-            //     element: <PetProfile/>,
-            // }
+            {
+                path: "/profile",
+                element: <Profile/>,
+            },
+            {
+                path: "/petprofile",
+                element: <PetProfile/>,
+            }
          
       
   

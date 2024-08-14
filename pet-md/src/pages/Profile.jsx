@@ -2,12 +2,12 @@
 
 
 
-import { useAuth } from "../AuthContext";
+// import { useAuth } from "../AuthContext";
 
 
 const Profile = () => {
 
-    const { user } = useAuth();
+    // const { user } = useAuth();
 
     
 
@@ -15,8 +15,9 @@ const Profile = () => {
  
 
     return (
-        <div>
-            <h1>Welcome, {user.email}</h1>
+        <div className="profile">
+            <h1>Welcome</h1>
+
         </div>
     );
 };
