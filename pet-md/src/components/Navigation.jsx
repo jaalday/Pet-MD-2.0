@@ -23,7 +23,7 @@ const Navigation = () => {
             </li>
           
      
-        {user ? (
+        {user? (
            <>
             <li className="nav-item">
             <a className="nav-link" href="/profile">Profile</a>
