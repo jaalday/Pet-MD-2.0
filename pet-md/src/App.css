@@ -110,12 +110,86 @@ margin-top: 10px;
 }
 .profile{
   width: 85%;
-  height: 70vh;
+ 
+  margin: auto;
   margin-top: 10%;
   background-color: #e4e4e5;
-  margin: auto;
+  text-align: center;
+padding-bottom: 20px;
   color: rgb(80, 86, 124);
   box-shadow: 0px 0px 10px 0px black;
+}
+.form{
+
+border-top: 3px solid rgb(52, 52, 108);
+  margin-top: 20px;
+
+}
+.input2{
+  width: 60%;
+  height: 36px;
+  margin-top: 20px;
+ background-color: #f9f9fb;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(37, 64, 160);
+}
+.select{
+  margin-top: 20px;
+  width: 30%;
+  height: 30px;
+
+ 
+}
+.addAnimal{
+  width: 40%;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(247, 246, 246);
+  background-color: #325586;
+  color: white;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px black;
+}
+.title2{
+  font-size: 50px;
+
+  margin-top: 20px;
+  color: rgb(49, 49, 133);
+}
+.petCard{
+  width: 60%;
+ 
+  margin: auto;
+  margin-top: 20px;
+  background-color: #325586;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 0px black;
+  text-decoration: none;
+}
+.petCard2{
+  width: 80%;
+ 
+  margin: auto;
+  margin-top: 20px;
+  background-color: #325586;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 0px black;
+  text-decoration: none;
+  border: 3px solid rgb(171, 171, 173);
+  font-size: 20px;
+}
+.petName{
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: 4px solid rgb(233, 232, 232);
+
+  margin-top: 10px;
 }
 
 @media (min-width: 800px) {

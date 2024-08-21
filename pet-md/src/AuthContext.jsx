@@ -95,9 +95,9 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Define an async function to fetch the current session
+ 
     const fetchSession = async () => {
-      const { data: session, error } = await supabase.auth.getSession();
+      const { data: {session}, error} = await supabase.auth.getSession();
       if (error) {
         console.error("Error getting current session:", error.message);
       } else {
@@ -105,15 +105,18 @@ export const AuthProvider = ({ children }) => {
       }
     };
 
-    // Call the async function
+ 
     fetchSession();
 
-    // Set up the authentication state change listener
+
     const { data: authListener } = supabase.auth.onAuthStateChange(
       (event, session) => {
         setUser(session?.user ?? null);
       }
     );
+    return () => {
+      authListener?. subscription.unsubscribe();
+    };
   }, []);
 
   const value = {

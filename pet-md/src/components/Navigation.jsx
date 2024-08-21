@@ -1,5 +1,6 @@
 
 import { useAuth } from '../AuthContext';
+import{ Link } from 'react-router-dom';
 
 
 const Navigation = () => {
@@ -13,7 +14,7 @@ const {isAuth } = useAuth();
 <>
 <nav className="navbar  navbar-expand-lg bg-body-" >
   <div className="container-fluid">
-    <a className="logo" href="/"><img className="logo" src="https://ultrapet.com/wp-content/uploads/2015/12/PETMD-Logo.png"></img></a>
+    <Link to= "/" className='logo' ><img className="logo" src="https://ultrapet.com/wp-content/uploads/2015/12/PETMD-Logo.png"></img></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -26,13 +27,13 @@ const {isAuth } = useAuth();
         {isAuth? (
            <>
             <li className="nav-item">
-            <a className="nav-link" href="/profile">Profile</a>
+            <Link className="nav-link" to ="/profile">  Profile</Link>
             </li>
             <li>
-            <a className="nav-link" href="/petprofile">Pet Profile</a>
+            <Link to ="/petprofile" className="nav-link"> Pet Profile</Link>
             </li>
             <li>
-            <a className="nav-link" href="/logout">Logout</a>
+            <Link to ="/logout" className="nav-link" >Logout</Link>
             </li>
             </>
             
