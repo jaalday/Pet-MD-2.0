@@ -41,13 +41,13 @@ const {isAuth } = useAuth();
               <>
            
             <li className="nav-item">
-              <a className="nav-link" href="/about">About</a>
+              <Link to="/about" className="nav-link" ></Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/signup">Sign up</a>
+              <Link to="/signup" className="nav-link" >Sign up</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/login">Login</a>
+              <Link to="/login" className="nav-link" >Login</Link>
             </li>
             </>
           )}

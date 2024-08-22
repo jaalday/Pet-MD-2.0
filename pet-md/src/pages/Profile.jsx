@@ -84,8 +84,9 @@ const [pets, setPets] = useState([]);
                }
 
                 </div>
-            <Form className="form" id="addPet" name="addPet" method="POST" key={user.id}>
-                
+
+            <Form className="form" id="addPet" name="addPet" method="POST" key={user}>
+            <h3>Fill out this form below to add a new animal</h3>
                 <input className="input2" type="text" name="name" id="name" placeholder="Pet Name" required />
                 <br/>
                
