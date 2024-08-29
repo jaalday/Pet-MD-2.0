@@ -9,6 +9,7 @@ import ProtectedRoutesLayout from '../components/ProtectedRoutes';
 import { useAuth } from '../AuthContext';
 import Logout from '../components/Logout';
 import PetProfile from './PetProfile';
+import About from './About';
 
 
 
@@ -37,6 +38,10 @@ const publicRoutes = [
              
             
             },
+            {
+                path: "/about",
+                element: <About/>,
+            }
         
           
          
@@ -63,6 +68,10 @@ const publicRoutes = [
                     {
                         path: "/logout",
                         element: <Logout/>,
+                    },
+                    {
+                        path: "/about",
+                        element: <About/>,
                     }
               
                           
