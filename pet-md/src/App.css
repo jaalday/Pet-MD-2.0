@@ -17,20 +17,41 @@
   border-bottom: 3px solid rgb(52, 52, 108);
 }
 .nav-link{
+ font-size: 30px;
+  color: rgb(52, 52, 108);
   text-decoration: none;
-  color: rgb(40, 40, 56);
-  font-size: 20px;
+  padding: 10px;
+  display: block;
+  text-align: right;
   font-weight: bold;
- float: right;
-  margin: 10px;
  
+}
+.nav-item{
+  display: block;
 }
 .navbar{
   border-bottom: 2px solid white;
+  background-color: rgb(230, 229, 229);
+}
+.offcanvas-body{
+  background-color: #d3d4d6;
+
+
+
+}
+.btn{
+  background-color: #325586;
+  color: white;
+  border: 2px solid rgb(52, 52, 108);
+  border-radius: 10px;
+
+ 
+
 }
    
 
 .background{
+  
 
   height: 100%;
   width: 100%;
@@ -192,6 +213,7 @@ border-top: 3px solid rgb(52, 52, 108);
 
   margin-top: 10px;
 }
+
 
 @media (min-width: 800px) {
   .logo{

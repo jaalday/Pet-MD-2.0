@@ -2,33 +2,37 @@ import  { useState, useEffect } from 'react';
 
 import { supabase } from "../config/supabaClients";
 
-const PetImages = ({petId}) => {
-    const [images, setImages] = useState([]);
-    useEffect(() => {
-        const fetchImages = async () => {
-            const { data, error } = await supabase
-                .from('images')
-                .select("*")
-                .eq('pet_id', petId);
-            console.log(data);
-            if (error) {
-                console.log(error);
-                setImages(null);
-            }
-            if (data) {
-                setImages(data);
-            }
-        };
-        fetchImages();
-    },[petId]);
-    return (
-        <div>
-            {images.map((image) => (
-                <img src={image.url} alt={image.alt} key={image.id} />
-            ))}
-        </div>
-    );
-}
+const BUCKET_URL = "https://xobbmqtuxogbnqjxbzof.supabase.co/storage/v1/object/public/images/";
+
+
+// const PetImages = ({petId}) => {
+//     const user
+//     const [images, setImages] = useState([]);
+//     useEffect(() => {
+//         const fetchImages = async () => {
+//             const { data, error } = await supabase
+//                 .from('images')
+//                 .select("*")
+//                 .eq('pet_id', petId);
+//             console.log(data);
+//             if (error) {
+//                 console.log(error);
+//                 setImages(null);
+//             }
+//             if (data) {
+//                 setImages(data);
+//             }
+//         };
+//         fetchImages();
+//     },[petId]);
+    // return (
+    //     <div>
+    //         {images.map((image) => (
+    //             <img src={image.url} alt={image.alt} key={image.id} />
+    //         ))}
+    //     </div>
+    // );
+// }
 
 
 
