@@ -10,6 +10,7 @@ import { useAuth } from '../AuthContext';
 import Logout from '../components/Logout';
 import PetProfile from './PetProfile';
 import About from './About';
+import Information from './Information';
 
 
 
@@ -41,6 +42,10 @@ const publicRoutes = [
             {
                 path: "/about",
                 element: <About/>,
+            },
+            {
+                path: "/information",
+                element: <Information/>
             }
         
           

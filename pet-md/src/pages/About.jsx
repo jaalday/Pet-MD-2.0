@@ -1,4 +1,7 @@
 import orange_cat from "../assets/orange_cat.jpg";
+import cat_pic from "../assets/cat_face.png";
+import begal from "../assets/begal.png";
+import doctor from "../assets/doctor.png";
 
 
 
@@ -13,24 +16,29 @@ const About = () => {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="..." className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+      <img src={cat_pic} className="imgabout" alt="young brown tabby cat"/>
+      <div className="carousel-caption d-md-block">
+        < div className="slide">
+        <h5 className="about">About</h5>
+        <p>Pet Chart is an app to store your pets medical information to make vet trips less of a headache. </p></div>
       </div>
     </div>
     <div className="carousel-item">
-      <img src="..." className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+      <img src={begal} className="d-block w-100" alt="..."/>
+      <div className="carousel-caption  d-md-block">
+        <div className="slide">
+        <h5 className="about">Create Profiles</h5>
+        <p>Create pet profiles for each of your pets to store their unique history.</p>
+        </div>
       </div>
     </div>
     <div className="carousel-item">
-      <img src="..." className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+      <img src={doctor}className="d-block w-100" alt="..."/>
+      <div className="carousel-caption  d-md-block">
+      <div className="slide">
+        <h5 className="about">Medical Information</h5>
+        <p>Learn about certain medical information on the info page</p>
+        </div>
       </div>
     </div>
   </div>
