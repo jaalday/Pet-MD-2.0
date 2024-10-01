@@ -33,11 +33,12 @@ const {isAuth } = useAuth();
             <li>
             <Link to ="/petprofile" className="nav-link"> Pet Profile</Link>
             </li>
+          
+            <li className="nav-item">
+              <Link to="/information" className="nav-link" >Medical tips</Link>
+            </li>
             <li>
             <Link to ="/logout" className="nav-link" >Logout</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/" className="nav-link" >Medical tips</Link>
             </li>
             </>
             
