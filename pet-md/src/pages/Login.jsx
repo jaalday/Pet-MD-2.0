@@ -3,6 +3,7 @@
 import { useContext, useState } from 'react';
 import { supabase } from '../config/supabaClients';
 import { useNavigate, Link} from 'react-router-dom';
+import dogImg from '../assets/dogImg.webp';
 
 const Login  = () => {
 
@@ -45,7 +46,8 @@ const Login  = () => {
     // }
   };
   return (
-    <div className='login-container'>
+    <>
+      <img className='login-container' src={dogImg} alt='login'/>
       <h2 className='login-text'>Login</h2>
       <form onSubmit={handleLogin}>
         <div>
@@ -74,7 +76,8 @@ const Login  = () => {
         <button className='login-button' type="submit">Login</button>
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-    </div>
+      </>
+   
   );
 
 }

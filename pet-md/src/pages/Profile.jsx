@@ -12,6 +12,7 @@ import { useState } from "react";
 
 
 
+
 const addPet = async (e) => {
     e.preventDefault();
 const formData = new FormData(document.getElementById('addPet'));
@@ -84,8 +85,26 @@ const [pets, setPets] = useState([]);
                }
 
                 </div>
+                
 
-            <Form className="form" id="addPet" name="addPet" method="POST" key={user}>
+        
+
+<div className="modal-dialog modal-dialog-centered">
+
+
+
+       
+            </div>
+            <button className="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  Add Animal
+</button>
+<div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div className="offcanvas-header">
+    <h5 className="offcanvas-title" id="offcanvasExampleLabel">Add New Animal</h5>
+    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div className="offcanvas-body">
+  <Form className="form" id="addPet" name="addPet" method="POST" key={user}>
             <h3>Want to add a new animal?</h3>
                 <input className="input2" type="text" name="name" id="name" placeholder="Pet Name" required />
                 <br/>
@@ -114,8 +133,25 @@ const [pets, setPets] = useState([]);
             
             <button className="addAnimal" onClick={addPet} type="submit">Add animal</button>
             </Form>
+   
 
-        </div>
+  </div>
+</div>
+
+
+            
+            </div> 
+            
+
+            
+          
+    
+   
+
+
+
+
+     
     );
 };
 
