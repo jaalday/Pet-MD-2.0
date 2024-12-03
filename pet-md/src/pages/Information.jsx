@@ -6,6 +6,7 @@ const Information = () => {
             <h1>Medical</h1>
             <p>Medical information about pets</p>
             <button>Read more</button>
+            <p> sahhhhhh</p>
             
 
         </div>
